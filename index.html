@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ka.css">
+    <title>Karem Alsarea</title>
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>Karem Alsarea</h2>
+            <P>Product management</P>
+        </div>
+
+        <div class="inputs">
+            <input placeholder="اسم المنتج" type="text" id="title">
+            <div class="price">
+                <input onkeyup="getTotal()" type="number"  id="price" placeholder="السعر">
+                <input onkeyup="getTotal()" type="number"  id="taxes" placeholder="الضرائب">
+                <input onkeyup="getTotal()" type="number"  id="ads" placeholder="الاعلانات">
+                <input onkeyup="getTotal()" type="number"  id="discount" placeholder="الخصم">
+                <small  id="total"></small>
+            </div>
+            <input type="number"  id="count" placeholder="عدد المنتج">
+            <input type="text"  id="category" placeholder="وصف المنتج">
+            <button id="submit">اضافة</button>
+        </div>
+
+
+        <div class="outputs">
+            <div class="search">
+                <input onkeyup="searchdata(this.value)" type="text" id="search" placeholder="البحث ">
+            </div>
+            <div class="btnsearch">
+    
+                <button onclick="getsearchmood(this.id)" id="searchtaitle">البحث بالاسم</button>
+                <button onclick="getsearchmood(this.id)" id="search category">البحث الوصف</button>
+
+
+                
+            </div>
+
+            <div id="delete all" class="dd">
+                
+            </div>
+
+            <table>
+                <tr>  
+                    <th> الرقم</th> 
+                    <th> الاسم</th>
+                    <th> السعر</th>
+                    <th> الضرائب</th>
+                    <th> الاعلانات</th>
+                    <th> الخصم</th>
+                    <th> المجموع</th>
+                    <th> الوصف</th>
+                    <th> تحديث</th>
+                    <th> حذف</th>
+
+
+                </tr>
+                <tbody id="tbody">
+                   </tbody>
+
+
+
+
+            </table>
+        
+        </div>
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
